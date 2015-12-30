@@ -1,4 +1,4 @@
-# Fixed
+Fixed
 ======
 **Fixed** a scheduling app built in AngularJS
 
