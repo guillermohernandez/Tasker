@@ -3,11 +3,25 @@ html {
 }
 
 body {
-    background: #252525;
+    background: #2c3e50;
     color: #ECF0F1;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
     margin: 0;
+}
+
+.btn-danger {
+    background: #d9534f;
+    background-image: none;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 h1 {
@@ -21,6 +35,29 @@ hr {
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+i[class*=fa-trash]::before {
+    opacity: 0.75;
+}
+
+.panel {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-clip: padding-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.panel-default>.panel-heading {
+    background-color: #27AE60;
+}
+
+.panel-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 
@@ -59,8 +96,21 @@ hr {
 /* if the label is not checked */
 
 .time-slot input:not(:checked) ~ label {
+    /*
     background: #6AB074;
     animation: flashAvailable 0.5s ease;
+*/
+    background: #2ECC71;
+    background-image: none;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none ! important;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 

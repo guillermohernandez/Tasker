@@ -7,7 +7,7 @@
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Lobster&effect=3d|Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster&effect=3d|Montserrat:400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -29,27 +29,30 @@
         </div>
 
         <div class="row times">
-
             <div class="col-md-3 text-center" ng-repeat="day in days">
-
-                <h2>{{ day.name }}</h2>
-
-                <div class="time-slot" ng-repeat="slot in day.slots">
-                    <input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked">
-                    <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}
-                        <br>
-                        <span ng-if="slot.booked">Booked</span>
-                        <span ng-if="!slot.booked">Available</span>
-                    </label>
+                <div class="panel panel-default time-slot">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">{{ day.name }}</h2>
+                    </div>
+                    <div class="panel-body" ng-repeat="slot in day.slots">
+                        <input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked">
+                        <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}
+                            <br>
+                            <span ng-if="slot.booked">Booked</span>
+                            <span ng-if="!slot.booked">Available</span>
+                        </label>
+                    </div>
                 </div>
             </div>
-
         </div>
 
         <p class="text-center">
-            <a href="#" class="btn btn-danger btn-lg fa fa-trash fa-lg" ng-click="reset()"> Clear</a>
-        </p>
+            <a href="#" class="btn btn-danger btn-lg " ng-click="reset()"> Clear</a>
 
+        </p>
+        <p class="text-center">
+            <br> <i class="fa fa-trash fa-3x"></i>
+        </p>
     </div>
 </body>
 
