@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Angular Scheduling</title>
+    <title>Fixed - A Real-time Schedule</title>
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster&effect=3d|Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- JS -->
@@ -23,12 +25,12 @@
     <div class="container" ng-app="scheduleApp" ng-controller="mainController">
 
         <div class="page-header text-center">
-            <h1>Fixed - A Real-time Schedule</h1>
+            <h1 class="font-effect-3d">Fixed Scheduler</h1>
         </div>
 
         <div class="row times">
 
-            <div class="col-xs-4 text-center" ng-repeat="day in days">
+            <div class="col-md-3 text-center" ng-repeat="day in days">
 
                 <h2>{{ day.name }}</h2>
 
@@ -45,7 +47,7 @@
         </div>
 
         <p class="text-center">
-            <a href="#" class="btn btn-primary" ng-click="reset()">Reset</a>
+            <a href="#" class="btn btn-danger btn-lg fa fa-trash fa-lg" ng-click="reset()"> Clear</a>
         </p>
 
     </div>

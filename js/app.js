@@ -1,7 +1,7 @@
-// create our angular module and inject firebase
+// angular module with the firebase dependency
 angular.module('scheduleApp', ['firebase'])
 
-// create our main controller and get access to firebase
+// main controller with access to firebase
 .controller('mainController', function ($scope, $firebase) {
 
     // connect to firebase 

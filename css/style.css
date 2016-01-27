@@ -1,42 +1,94 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #252525;
+    color: #ECF0F1;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    /*    font-weight: 400;*/
+    font-size: 50px;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
 /* checkbox - each time slot */
-.time-slot               {  }
+
+.time-slot {}
+
 
 /* hide the checkbox itself - the label will be styled */
-.time-slot input     { 
-  display:none; 
+
+.time-slot input {
+    display: none;
 }
+
 
 /* default styling for our labels */
-.time-slot label     { 
-  padding:10px 20px; 
-  color:#FFF; 
-  cursor:pointer; 
-  background:#EEE; 
-  border-radius:5px; 
-  transition:0.3s ease all;
+
+.time-slot label {
+    padding: 10px 20px;
+    color: #FFF;
+    background: #EEE;
+    border-radius: 5px;
+    transition: 0.3s ease all;
 }
+
 
 /* if the label is checked */
-.time-slot input:checked ~ label { 
-  background:#f2dede; 
-  cursor:not-allowed;
-  animation:flashBooked 0.5s ease; 
+
+.time-slot input:checked ~ label {
+    background: #f2dede;
+    cursor: not-allowed;
+    animation: flashBooked 0.5s ease;
 }
+
 
 /* if the label is not checked */
-.time-slot input:not(:checked) ~ label { 
-  background:#6AB074; 
-  animation:flashAvailable 0.5s ease; 
+
+.time-slot input:not(:checked) ~ label {
+    background: #6AB074;
+    animation: flashAvailable 0.5s ease;
 }
+
 
 /* animation for the time slot to flash red */
+
 @keyframes flashBooked {
-  0%, 100%  { background:#f2dede; transform:scale(1); }
-  50%       { background:#F99090; transform:scale(1.5); }
+    0%,
+    100% {
+        background: #f2dede;
+        transform: scale(1);
+    }
+    50% {
+        background: #F99090;
+        transform: scale(1.5);
+    }
 }
 
+
 /* animation for the time slot to flash green */
+
 @keyframes flashAvailable {
-  0%, 100%  { background:#6AB074; transform:scale(1); }
-  50%       { background:rgb(119, 218, 78); transform:scale(1.5); }
+    0%,
+    100% {
+        background: #6AB074;
+        transform: scale(1);
+    }
+    50% {
+        background: rgb(119, 218, 78);
+        transform: scale(1.5);
+    }
 }
