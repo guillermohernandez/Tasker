@@ -1,6 +1,6 @@
-Fixed
+Tasker
 ======
-**Fixed** a scheduling app built in AngularJS
+**Tasker** a scheduling app built in AngularJS
 
 ## Demo
 http://codepen.io/guillermohernandez/full/gPejyJ/
